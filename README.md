@@ -1,14 +1,9 @@
 <div align="center">
 
-<!-- Animated header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Abrar&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full%20Stack%20Developer%20%7C%20Problem%20Solver%20%7C%20Open%20Source%20Enthusiast&descAlignY=55&descSize=16" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=160&section=header&text=Abrar%20Ahmad&fontSize=38&fontColor=fff&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20%26%20AI%2FML%20Engineer&descAlignY=55&descSize=16" width="100%"/>
 
-<!-- Typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6AD3F7&center=true&vCenter=true&width=600&lines=Hey+there%2C+I'm+Abrar+%F0%9F%91%8B;Full+Stack+Developer;Open+Source+Contributor;Always+learning+new+things)](https://git.io/typing-svg)
-
-<!-- Profile views + social badges -->
-![Profile Views](https://komarev.com/ghpvc/?username=Abrar5510&color=blueviolet&style=flat-square&label=Profile+Views)
 [![GitHub followers](https://img.shields.io/github/followers/Abrar5510?label=Followers&style=flat-square&color=blue)](https://github.com/Abrar5510)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/Abrar5510)
 
 </div>
 
@@ -16,16 +11,13 @@
 
 ## About Me
 
-Hey! I'm **Abrar** — a passionate **Full Stack Developer** who loves turning ideas into real, working products. I enjoy building things for the web, contributing to open source, and constantly pushing myself to learn new technologies.
+I'm a Full Stack Developer and AI/ML Engineer focused on building production-quality software — from web applications to machine learning systems.
 
-- 🎓 Computer Science student with a strong foundation in **data structures, algorithms, and software design**
-- 💼 Experienced in building end-to-end web applications from UI design to database architecture
-- 🌍 Open source advocate — I believe good software should be shared and improved by the community
-- 🧠 Currently deepening my knowledge in **AI/ML**, **cloud infrastructure**, and **system design**
-- 🎯 Goal: Write clean, maintainable code that solves real-world problems
-- 🤝 Always open to collaborating on exciting projects — feel free to reach out!
-
-> *"First, solve the problem. Then, write the code."* — John Johnson
+- Strong foundation in data structures, algorithms, and software design
+- Experience building end-to-end web applications, from UI to database architecture
+- Actively working on AI/ML projects spanning computer vision, LLM fine-tuning, and applied ML
+- Open source contributor, committed to writing clean, maintainable code
+- Open to collaborating on interesting projects — feel free to reach out
 
 ---
 
@@ -105,21 +97,13 @@ Hey! I'm **Abrar** — a passionate **Full Stack Developer** who loves turning i
 
 </div>
 
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Abrar5510&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
-
-</div>
-
 ---
 
-## What I'm Up To
+## Currently
 
-- 🔭 Currently working on **personal projects and open-source contributions**
-- 🌱 Learning **cloud architecture, system design, and AI/ML**
-- 👯 Looking to collaborate on **interesting open-source projects**
-- 💬 Ask me about **web development, algorithms, or anything tech**
-- ⚡ Fun fact: **The first computer bug was an actual bug — a moth found in a relay**
+- Building and shipping AI/ML and full-stack projects (see [Portfolio](PORTFOLIO.md) and [Extended Projects](EXTENDED_PROJECTS.md))
+- Deepening expertise in cloud infrastructure, system design, and applied AI/ML
+- Open to collaborating on open-source and production-grade projects
 
 ---
 
