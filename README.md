@@ -28,20 +28,6 @@ I'm **Abrar Ahmad**, a full-stack engineer with a broad, deployed project portfo
 
 ---
 
-## 🔗 Portfolio Website
-
-The full interactive portfolio site now lives in this repo at [`/website`](./website) — a Next.js 15 + Tailwind + Framer Motion site with a filterable project grid, animated stats, and a full skills breakdown.
-
-```bash
-cd website
-npm install
-npm run dev      # http://localhost:3000
-```
-
-See [`website/README.md`](./website/README.md) for local development and deployment instructions.
-
----
-
 ## Featured Projects
 
 | Project | Category | What It Does |
