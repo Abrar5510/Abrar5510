@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  background: rgba(34, 211, 238, 0.3);
+  color: #fff;
+}
+
+html {
+  scrollbar-color: #1e293b #04070d;
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-400 via-sky-300 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply border border-line bg-panel/70 backdrop-blur-xl;
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full border border-line bg-white/[0.03] px-3 py-1 font-mono text-xs text-slate-400 transition-colors duration-300 hover:border-cyan-400/40 hover:text-cyan-300;
+  }
+}
+
+/* card spotlight that follows the cursor */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(
+    480px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(34, 211, 238, 0.08),
+    transparent 60%
+  );
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
