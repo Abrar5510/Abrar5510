@@ -4,13 +4,11 @@
 **LinkedIn:** [linkedin.com/in/Abrar5510](https://linkedin.com/in/Abrar5510)
 **Location:** Islamabad, Pakistan
 
-An interactive version of this portfolio, with filtering and a live project grid, lives in this repo at [`/website`](./website).
-
 ---
 
 ## Summary
 
-Full-stack engineer with a broad, deployed project portfolio spanning AI/ML systems, SaaS platforms, mobile applications, and game development. Comfortable working across the stack — from LLM-based applications and computer vision pipelines to cross-platform mobile apps — using modern web, cloud, and ML tooling.
+AI engineer building agent systems, applied ML, and the infrastructure that makes them trustworthy: sandboxed execution, verification against ground truth, and constrained agent-to-agent protocols. Earlier work covers SaaS platforms, mobile apps with on-device computer vision, and game development.
 
 ## Experience
 
@@ -27,13 +25,53 @@ Full-stack engineer with a broad, deployed project portfolio spanning AI/ML syst
 | **Blockchain & Security** | Solidity & Hardhat (upgradeable proxies, stablecoins), Web3 identity (Coral Protocol), DeFi risk systems, SOC automation & vulnerability remediation, AML/KYC compliance, MITRE ATT&CK |
 | **DevOps** | Docker & Docker Compose, Kubernetes, Kafka, Turborepo/pnpm monorepos, microservices, multi-cloud deploys (Vercel, Railway, Fly, Render), CI/CD (GitHub Actions) |
 
-All projects below are deployed; several remain in active development ahead of a full v1 release.
+Linked projects are public repositories. Projects without a link are in private repositories.
+
+---
+
+## Recent Work (Sept–Nov 2026)
+
+### [Triage](https://github.com/Abrar5510/triage): Sandboxed Verification of Bug Bounty Reports *(Vultr Agent Rush hackathon)*
+Built an agent that reproduces or rejects each bug bounty report before a person reads it. It grounds each claim in the real library source, rebuilds the affected version in a disposable sandbox, and runs the submitted proof of concept against vulnerable and patched builds. Hostile PoCs are contained by canary credentials, blocked network access, and PID, memory, and wall-clock caps. Reproduced CVE-2024-4340 in 53 s and rejected a fabricated "CVSS 9.8 RCE" without running anything.
+**Tech:** Python, Docker, Vultr
+
+### [Rashomon](https://github.com/Abrar5510/rashomon): Unit Tests for Readability *(Bob IDE hackathon)*
+Five isolated model readers predict what a function returns, and the interpreter decides who was right. Misread rates are scored with 95% Wilson intervals, so a single bad reader can't flag a function. Rewrites are checked on held-out probes, and a PR gate reports when a change made code harder to read. Live at [rashomon-iota.vercel.app](https://rashomon-iota.vercel.app).
+**Tech:** Python, Anthropic / OpenAI / Gemini APIs, GitHub Actions
+
+### [Between](https://github.com/Abrar5510/between) and [between-protocol](https://github.com/Abrar5510/between-protocol): Agent-to-Agent Negotiation Between Households *(Amazon Alexa+ hackathon)*
+Household assistants negotiate childcare cover with each other and return one proposal for both families to approve. Each household runs its own MCP server, and only signed, schema-validated offers cross between them. The wire protocol is published as a standalone package: a strict Zod schema, Ed25519 signatures over the raw bytes, expiry and clock-skew checks, and a pure state machine that caps counter-offers.
+**Tech:** TypeScript, MCP (with MCP App UI), Zod, Ed25519, SQLite
+
+### [Shopfront MCP](https://github.com/Abrar5510/shopfront-mcp): Seller-Side Agentic Commerce
+Lets any small shop be found and bought from by AI assistants. Gemini writes agent-readable listings from raw merchant notes, each shop gets its own MCP server (search, Q&A, checkout), and payment runs through PayPal with server-side amount checks. The dashboard shows the questions agents asked that the listings couldn't answer. Live at [shopfront-mcp.vercel.app](https://shopfront-mcp.vercel.app).
+**Tech:** Node.js, MCP (Streamable HTTP), Gemini, PayPal JS SDK
+
+### [Bimanual Dinner-Table Agent](https://github.com/Abrar5510/busboy): Language-Driven Dual-Arm Manipulation
+Two simulated SO-101 arms set a table from natural-language commands. A Qwen3-1.7B INT4 planner on OpenVINO GenAI (JSON-schema constrained, with a critic) produces a plan for both arms. IK and OMPL skills carry it out, and a camera checks every step and triggers a re-plan on failure. Completed 56/60 held-out episodes and 45/50 free-form commands. SmolVLA and ACT baselines were trained on expert demonstrations and exported to OpenVINO in f32 and INT8, with parity checks.
+**Tech:** MuJoCo, OpenVINO, LeRobot, SmolVLA, mink, OMPL
+
+### [Lunar Horizon](https://github.com/Abrar5510/lunar-horizon): Illumination and Communications Analysis for the Lunar South Pole
+Computes sunlight, solar power, Direct-to-Earth visibility, and DSN coverage for any site near the lunar south pole. Horizon masks are ray-marched from NASA LOLA elevation data, and Sun and Earth positions come from SPICE (DE440). Validated against JPL Horizons to better than 0.0001°. A C++ port of the science core matches the Python reference to about 5e-6°, and an Unreal Engine 5 viewer is in progress.
+**Tech:** Python, C++, NAIF SPICE, Unreal Engine 5
+
+### [86 It](https://github.com/Abrar5510/86-it): Voice Control for Restaurant Kitchens
+Cooks run the kitchen by voice ("86 salmon", "fire 12", "all day fries"), and every screen updates in real time: the kitchen display, front of house, and online menu. A deterministic command grammar acts on the final transcript straight away, while the voice agent handles confirmations and anything unmatched. Includes a protocol-accurate mock server and an eval harness.
+**Tech:** AssemblyAI Voice Agent API, Cloudflare Workers + Durable Objects, plain JavaScript
+
+### [Show It Once](https://github.com/Abrar5510/Nebius): One Phone Demonstration to Robot Skill *(Nebius × NVIDIA hackathon)*
+A ten-stage pipeline that turns one phone video into a robot skill: task spec, digital twin, object-centric motion extraction, retargeting, simulation checks, synthetic data, and a GR00T N1.6 LoRA. Phase 1 (orchestrator, job store, artifact storage, dashboard, 60 tests) is complete, and Nemotron calls are live. The GPU stages are still in development.
+**Tech:** Python, NVIDIA Nemotron / Cosmos / GR00T, Nebius
+
+### Smaller builds
+- **[pj](https://github.com/Abrar5510/pj):** a local-first task tracker for people and AI agents: CLI, MCP server, and web UI over plain-markdown `STATE.md` files.
+- **[The Promise Ledger](https://github.com/Abrar5510/promise-ledger)** *(Affinda AI Innovation Challenge)*: extracts every commitment from email threads, each backed by a verbatim quote, and flags conflicts with plain rule-based checks.
 
 ---
 
 ## AI & LLM Systems
 
-### Doctor-Ai — AI Medical Diagnostic Support System
+### [Doctor-Ai](https://github.com/Abrar5510/Doctor-Ai) — AI Medical Diagnostic Support System
 Built a symptom-to-diagnosis platform that ranks differential diagnoses, including rare diseases via HPO ontology mapping, using vector similarity search over medical knowledge bases.
 **Tech:** FastAPI, Qdrant, BioBERT/PubMedBERT, React 18, multi-cloud deployment (Vercel/Railway/Fly/Render)
 
@@ -41,7 +79,7 @@ Built a symptom-to-diagnosis platform that ranks differential diagnoses, includi
 Developed a four-portal platform (student/teacher/parent/admin) with an AI tutor, automated lesson and assessment generation, and auto-grading, behind a pluggable LLM provider layer supporting Ollama, vLLM, OpenAI, Anthropic, and Azure.
 **Tech:** FastAPI, PostgreSQL, React, JWT/RBAC, Docker
 
-### CHEX — LLM Fine-Tuning for Legal QA with Hallucination Control
+### [CHEX](https://github.com/Abrar5510/CHEX) — LLM Fine-Tuning for Legal QA with Hallucination Control
 Fine-tuned Qwen3.5-9B with 4-bit LoRA (NF4) on AMD MI300X/ROCm, adding calibrated uncertainty labels to reduce hallucination in legal question-answering, with a full MLOps pipeline from synthetic data generation through benchmark evaluation.
 **Tech:** LoRA/QLoRA, Transformers, ROCm, Gradio
 
@@ -129,7 +167,7 @@ Built a game engine from scratch with an ECS architecture, an FMOD-style audio m
 Built two rendering engines from first principles: LUMEN, a Monte Carlo path tracer in roughly 700 lines of pure Python with BVH acceleration and ACES tonemapping, and AETHER, a real-time PBR engine in JavaScript with shadows, bloom, and physics.
 **Tech:** Rendering math, computational physics
 
-### Farm_navigator (FarmingSim) — Educational Farming Simulator, Unreal Engine
+### [Farm_navigator](https://github.com/Abrar5510/Farm_navigator) (FarmingSim) — Educational Farming Simulator, Unreal Engine
 Built gameplay systems for an educational farming simulator, including a farming HUD, a drought/flood disaster manager, and sustainability reporting.
 **Tech:** Unreal Engine, C++
 

@@ -1,139 +1,68 @@
-<div align="center">
+### Hi, I'm Abrar Ahmad
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Abrar%20Ahmad&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full-Stack%20AI%20Engineer&descAlignY=55&descSize=18" width="100%"/>
+I'm an AI engineer based in Islamabad. I build agent systems and the parts that make them trustworthy: sandboxes that run untrusted code, verifiers that check model output against ground truth, and protocols that limit what an agent can send.
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=6AD3F7&center=true&vCenter=true&width=700&lines=Full-Stack+AI+Engineer;LLMs+%C2%B7+RAG+%C2%B7+Computer+Vision+%C2%B7+Mobile+%C2%B7+Games;Shipping+production+systems+end+to+end)](https://git.io/typing-svg)
-
-[![Portfolio](https://img.shields.io/badge/Portfolio-View_Site-6AD3F7?style=flat-square)](./website)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://linkedin.com/in/Abrar5510)
-![Profile Views](https://komarev.com/ghpvc/?username=Abrar5510&color=blueviolet&style=flat-square&label=Profile+Views)
-
-</div>
+[Email](mailto:abrar5510@icloud.com) · [LinkedIn](https://linkedin.com/in/Abrar5510) · [Project write-ups](./PORTFOLIO.md)
 
 ---
 
-## About Me
+### Recent work
 
-I'm **Abrar Ahmad**, a full-stack engineer with a broad, deployed project portfolio spanning AI/ML systems, SaaS platforms, mobile applications, and game development. I'm comfortable working across the stack — from LLM-based applications and computer vision pipelines to cross-platform mobile apps — using modern web, cloud, and ML tooling.
+**[Triage](https://github.com/Abrar5510/triage)**: verifies bug bounty reports before a person reads them.
+It rebuilds the affected library version in a disposable sandbox, runs the submitted proof of concept against the vulnerable and patched builds, and contains hostile code with canary credentials, no network access, and PID and memory caps. A report that names a function missing from the real source is rejected before anything runs. It reproduced CVE-2024-4340 in 53 seconds.
+<sub>Python · Docker · Vultr · Vultr Agent Rush hackathon</sub>
 
-- 🧠 Building applied AI systems: LLM integration, RAG pipelines, and multi-agent orchestration
-- 👁️ Computer vision across face recognition, object detection, and pose/AR-based mobile apps
-- 📱 Cross-platform mobile: React Native/Expo, native SwiftUI/Kotlin, shared C++ cores
-- 🎮 Games & graphics: Unreal Engine 5, from-scratch C++20 engines, path-traced and PBR renderers
-- 📚 30+ shipped projects — full write-ups in [`PORTFOLIO.md`](./PORTFOLIO.md), interactive version in [`/website`](./website)
+**[Rashomon](https://github.com/Abrar5510/rashomon)**: unit tests for readability. ([live](https://rashomon-iota.vercel.app))
+Five isolated model readers predict what a function returns. The function then runs, and the misread rate is scored with a Wilson interval so that one bad reader can't flag a function. A rewrite is checked against held-out inputs to confirm it actually reads better. Includes 43 tests and a GitHub PR gate.
+<sub>Python · Anthropic / OpenAI / Gemini · Bob IDE hackathon</sub>
 
-**Experience:** Co-Leader, Eco Internship — WWF Pakistan (Jul–Aug 2025)
+**[Between](https://github.com/Abrar5510/between)** + **[between-protocol](https://github.com/Abrar5510/between-protocol)**: household assistants that negotiate childcare cover with each other.
+Each household runs its own MCP server. Only offers cross between households, and each offer is schema-checked and Ed25519-signed, so calendars and names stay private. The protocol is published as a standalone package: a strict Zod schema, signing, and a pure state machine with bounded counter-offers.
+<sub>TypeScript · MCP · Zod · SQLite · Amazon Alexa+ hackathon</sub>
 
-> *"First, solve the problem. Then, write the code."* — John Johnson
+**[Shopfront MCP](https://github.com/Abrar5510/shopfront-mcp)**: makes a small shop buyable by AI agents. ([live](https://shopfront-mcp.vercel.app))
+Gemini turns a merchant's product notes into listings agents can read. Each shop gets its own MCP server for search, questions, and checkout, and payment runs through PayPal. The merchant dashboard shows the questions agents asked that the listings couldn't answer, with a suggested fix for each.
+<sub>Node.js · MCP · Gemini · PayPal SDK</sub>
 
----
+**[Bimanual dinner-table agent](https://github.com/Abrar5510/busboy)**: two simulated SO-101 arms set a table from natural-language commands.
+An INT4 Qwen3 planner on OpenVINO turns the camera scene into a plan for both arms. IK and OMPL skills carry it out, and the camera checks each step and triggers a re-plan when one fails. It completed 56 of 60 episodes on held-out seeds. SmolVLA and ACT policies were trained for comparison and exported to OpenVINO in f32 and INT8.
+<sub>Python · MuJoCo · OpenVINO · LeRobot · SmolVLA</sub>
 
-## Featured Projects
+**[Lunar Horizon](https://github.com/Abrar5510/lunar-horizon)**: sunlight, solar power, and Earth visibility for any site near the lunar south pole.
+It ray-marches NASA LOLA terrain to build horizon masks and uses SPICE ephemerides to work out mission-planning numbers such as percent of time sunlit, longest night, and Deep Space Network coverage. Validated against JPL Horizons to better than 0.0001°. A C++ port of the science core matches the Python reference, and an Unreal Engine 5 viewer is in progress.
+<sub>Python · C++ · NAIF SPICE · Unreal Engine 5</sub>
 
-| Project | Category | What It Does |
-|---|---|---|
-| **CHEX** | LLM Fine-Tuning | Qwen3.5-9B fine-tuned with LoRA on AMD MI300X/ROCm, calibrated uncertainty labels to cut hallucination in legal QA |
-| **Doctor-Ai** | Healthcare AI | Symptom-to-diagnosis platform ranking differentials, including rare-disease HPO mapping, via vector search |
-| **Edu-Ai** | Education AI | Four-portal school platform (student/teacher/parent/admin) with an AI tutor and pluggable LLM backends |
-| **Truss** | Full-Stack AI | 8-stage AI construction design studio — generative floor plans, compliance checks, and a live 3D viewer |
-| **Atelier** | Full-Stack AI | AI furniture design consultant with streaming chat, structured design specs, and build-plan generation |
-| **FitU** | Mobile + CV | React Native fitness app with real-time pose estimation, rep counting, and form correction |
-| **ApexVelocity** | Games | Racing game in Unreal Engine 5.5 — 30 cars, 15 tracks, custom Blender asset pipeline |
-| **Engine** | Games/Systems | From-scratch C++20 game engine with ECS architecture and zero external dependencies |
+**[86 It](https://github.com/Abrar5510/86-it)**: hands-free voice control for restaurant kitchens.
+A cook says "86 salmon" and the item disappears from the kitchen display, the servers' screen, and the online menu. A small command grammar acts on the transcript right away, while the voice agent handles anything else. Includes a mock of the AssemblyAI protocol for testing without using credits.
+<sub>AssemblyAI Voice Agent API · Cloudflare Workers + Durable Objects · JavaScript</sub>
 
-Full breakdown of all 30 projects — including multi-agent hackathon builds, mobile/on-device AI, and rendering engines built from first principles — is in [`PORTFOLIO.md`](./PORTFOLIO.md).
+**[Show It Once](https://github.com/Abrar5510/Nebius)**: turns one phone video of a task into a robot skill.
+A ten-stage pipeline: compile the task spec, build a digital twin, extract object motion, retarget it to the robot, verify in simulation, generate synthetic data, then fine-tune a GR00T LoRA. The orchestration, job store, and dashboard are done, with 60 tests. The GPU stages are still being built.
+<sub>Python · NVIDIA Nemotron / Cosmos / GR00T · Nebius · Nebius × NVIDIA hackathon</sub>
 
----
-
-## Tech Stack
-
-### AI / ML
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![LangChain](https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-
-### Languages
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![Swift](https://img.shields.io/badge/Swift-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
-![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
-![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
-
-### Frontend & Mobile
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### Backend & Data
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-
-### DevOps & Cloud
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
-![Kafka](https://img.shields.io/badge/Kafka-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-
-### Games & Graphics
-![Unreal Engine](https://img.shields.io/badge/Unreal_Engine-0E1128?style=for-the-badge&logo=unrealengine&logoColor=white)
-![Unity](https://img.shields.io/badge/Unity-000000?style=for-the-badge&logo=unity&logoColor=white)
-![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
-![Blender](https://img.shields.io/badge/Blender-F5792A?style=for-the-badge&logo=blender&logoColor=white)
+<sub>Also: [pj](https://github.com/Abrar5510/pj), a local-first task tracker for people and AI agents (CLI, MCP server, and web UI over plain-markdown state files) · [The Promise Ledger](https://github.com/Abrar5510/promise-ledger), which pulls every commitment out of email threads and flags the ones that conflict.</sub>
 
 ---
 
-## GitHub Stats
+### Earlier work
 
-<div align="center">
+- **[CHEX](https://github.com/Abrar5510/CHEX)**: fine-tuned Qwen3.5-9B with QLoRA on AMD MI300X / ROCm, adding calibrated uncertainty labels to reduce hallucination in legal QA.
+- **[Doctor-Ai](https://github.com/Abrar5510/Doctor-Ai)**: ranks differential diagnoses from symptoms, including rare diseases through HPO mapping, using vector search with BioBERT embeddings.
+- **Truss**: an AI construction design studio covering brief, floor plans, structure, code compliance, and a bill of quantities, with a live 3D viewer. *(private)*
+- **ApexVelocity**: a racing game in Unreal Engine 5.5 with 30 cars, 15 tracks, and a Blender asset pipeline. *(private)*
+- **Engine**: a C++20 game engine with ECS, spatial audio, and a script interpreter, built with no external dependencies. *(private)*
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Abrar5510&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Abrar5510&layout=compact&langs_count=8&theme=tokyonight&hide_border=true"/>
-
-</div>
-
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=Abrar5510&theme=tokyonight&hide_border=true)](https://git.io/streak-stats)
-
-</div>
+Longer descriptions are in [PORTFOLIO.md](./PORTFOLIO.md).
 
 ---
 
-## Currently
+### Tools I use
 
-- 🔭 Building applied AI systems around LLMs, RAG, and multi-agent automation
-- 🌱 Deepening expertise in production ML infrastructure and system design
-- 👯 Open to collaborating on AI/ML, full-stack, or mobile projects
-- 💬 Ask me about LLM applications, RAG pipelines, computer vision, or cross-platform app architecture
-
----
-
-## Let's Connect
-
-<div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/Abrar5510)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Abrar5510)
-[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:abrar5510@icloud.com)
-
-</div>
+**ML:** PyTorch, Transformers, LoRA / QLoRA, OpenVINO, MuJoCo, LeRobot, OpenCV, MediaPipe
+**Agents:** MCP, LangGraph, tool calling and structured outputs, sandboxed execution, evals
+**Languages:** Python, TypeScript, C++, Swift
+**Web and infrastructure:** Next.js, React, FastAPI, Node.js, PostgreSQL, SQLite, Docker, Cloudflare Workers, Vercel
 
 ---
 
-<div align="center">
-
-*"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — Martin Fowler
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
-
-</div>
+<sub>Previously: Co-Leader, Eco Internship, WWF Pakistan (2025)</sub>
